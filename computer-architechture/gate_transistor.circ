@@ -3,6 +3,11 @@
   This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </tool>
     <tool name="Pin">
       <a name="appearance" val="classic"/>
     </tool>
@@ -43,7 +48,10 @@
     <tool lib="0" name="Pin"/>
     <tool lib="0" name="Pin">
       <a name="facing" val="west"/>
+      <a name="labelfont" val="SansSerif bold 18"/>
       <a name="output" val="true"/>
+      <a name="radix" val="10unsigned"/>
+      <a name="width" val="4"/>
     </tool>
     <sep/>
     <tool lib="1" name="NOT Gate"/>
@@ -61,23 +69,6 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="4.0"/>
-    <comp lib="0" loc="(180,120)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-    </comp>
-    <comp lib="0" loc="(180,140)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-    </comp>
-    <comp lib="0" loc="(690,120)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-    </comp>
-    <comp loc="(450,120)" name="NOR_GATE"/>
-    <comp loc="(470,290)" name="Full_Adder"/>
-    <comp loc="(670,120)" name="NOTGATE"/>
-    <wire from="(180,120)" to="(230,120)"/>
-    <wire from="(180,140)" to="(230,140)"/>
-    <wire from="(670,120)" to="(690,120)"/>
   </circuit>
   <circuit name="NOTGATE">
     <a name="appearance" val="logisim_evolution"/>
@@ -103,10 +94,10 @@
       <a name="label" val="V_out"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="8" loc="(239,318)" name="Text">
+    <comp lib="8" loc="(235,315)" name="Text">
       <a name="text" val="Arrow sign shows the Collector/ Drain"/>
     </comp>
-    <comp lib="8" loc="(453,29)" name="Text">
+    <comp lib="8" loc="(450,25)" name="Text">
       <a name="text" val="NOT Gate"/>
     </comp>
     <wire from="(360,160)" to="(430,160)"/>
@@ -147,7 +138,7 @@
       <a name="label" val="V_out"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="8" loc="(392,48)" name="Text">
+    <comp lib="8" loc="(390,45)" name="Text">
       <a name="text" val="NAND Gate"/>
     </comp>
     <wire from="(300,240)" to="(370,240)"/>
@@ -191,7 +182,7 @@
       <a name="facing" val="west"/>
       <a name="label" val="B"/>
     </comp>
-    <comp lib="8" loc="(420,74)" name="Text">
+    <comp lib="8" loc="(420,70)" name="Text">
       <a name="text" val="NOR Gate"/>
     </comp>
     <wire from="(260,290)" to="(330,290)"/>
@@ -225,7 +216,7 @@
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="8" loc="(408,53)" name="Text">
+    <comp lib="8" loc="(405,50)" name="Text">
       <a name="text" val="OR Gate"/>
     </comp>
     <comp loc="(410,140)" name="NOR_GATE"/>
@@ -255,10 +246,26 @@
     <wire from="(180,160)" to="(220,160)"/>
   </circuit>
   <circuit name="Full_Adder">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="Full_Adder"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="4.0"/>
+    <appear>
+      <rect fill="none" height="114" stroke="#000000" stroke-width="3" width="196" x="100" y="97"/>
+      <rect height="36" stroke="none" width="195" x="102" y="156"/>
+      <text dominant-baseline="central" fill="#ffffff" font-family="LM Mono 10" font-size="18" font-weight="bold" text-anchor="middle" x="197" y="172">Full Adder</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="231" y="114">A</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="170" y="114">B</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="279" y="138">C_in</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="128" y="139">C_out</text>
+      <text dominant-baseline="central" font-family="SansSerif" font-size="12" text-anchor="middle" x="210" y="203">S</text>
+      <circ-anchor facing="east" x="240" y="140"/>
+      <circ-port dir="in" pin="110,140" x="230" y="100"/>
+      <circ-port dir="in" pin="110,180" x="170" y="100"/>
+      <circ-port dir="in" pin="110,230" x="300" y="140"/>
+      <circ-port dir="out" pin="610,180" x="200" y="210"/>
+      <circ-port dir="out" pin="610,340" x="100" y="140"/>
+    </appear>
     <comp lib="0" loc="(110,140)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
@@ -288,13 +295,13 @@
     <comp lib="1" loc="(450,310)" name="AND Gate"/>
     <comp lib="1" loc="(450,380)" name="AND Gate"/>
     <comp lib="1" loc="(550,340)" name="OR Gate"/>
-    <comp lib="8" loc="(363,480)" name="Text">
+    <comp lib="8" loc="(360,480)" name="Text">
       <a name="text" val="Full Adder"/>
     </comp>
-    <comp lib="8" loc="(366,57)" name="Text">
+    <comp lib="8" loc="(365,55)" name="Text">
       <a name="text" val="S = A^B^C_in"/>
     </comp>
-    <comp lib="8" loc="(371,89)" name="Text">
+    <comp lib="8" loc="(370,85)" name="Text">
       <a name="text" val="C_out = AB + (A^B).C_in"/>
     </comp>
     <wire from="(110,140)" to="(190,140)"/>
@@ -323,5 +330,95 @@
     <wire from="(480,360)" to="(480,380)"/>
     <wire from="(480,360)" to="(500,360)"/>
     <wire from="(550,340)" to="(610,340)"/>
+  </circuit>
+  <circuit name="Add_4bit">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Add_4bit"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="4.0"/>
+    <comp lib="0" loc="(1210,440)" name="Ground"/>
+    <comp lib="0" loc="(1270,590)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Sum"/>
+      <a name="labelfont" val="SansSerif bold 18"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="10unsigned"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1270,590)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(130,350)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Carry"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(1310,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="A"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1310,160)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1310,70)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="B"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1310,70)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp loc="(1040,350)" name="Full_Adder">
+      <a name="label" val="S0"/>
+    </comp>
+    <comp loc="(310,350)" name="Full_Adder">
+      <a name="label" val="S3"/>
+    </comp>
+    <comp loc="(560,350)" name="Full_Adder">
+      <a name="label" val="S2"/>
+    </comp>
+    <comp loc="(800,350)" name="Full_Adder">
+      <a name="label" val="S1"/>
+    </comp>
+    <wire from="(1000,420)" to="(1000,600)"/>
+    <wire from="(1000,600)" to="(1250,600)"/>
+    <wire from="(1030,170)" to="(1030,310)"/>
+    <wire from="(1030,170)" to="(1290,170)"/>
+    <wire from="(1100,350)" to="(1210,350)"/>
+    <wire from="(1210,350)" to="(1210,440)"/>
+    <wire from="(130,350)" to="(170,350)"/>
+    <wire from="(240,110)" to="(1290,110)"/>
+    <wire from="(240,110)" to="(240,310)"/>
+    <wire from="(270,420)" to="(270,630)"/>
+    <wire from="(270,630)" to="(1250,630)"/>
+    <wire from="(300,200)" to="(1290,200)"/>
+    <wire from="(300,200)" to="(300,310)"/>
+    <wire from="(370,350)" to="(420,350)"/>
+    <wire from="(490,100)" to="(1290,100)"/>
+    <wire from="(490,100)" to="(490,310)"/>
+    <wire from="(520,420)" to="(520,620)"/>
+    <wire from="(520,620)" to="(1250,620)"/>
+    <wire from="(550,190)" to="(1290,190)"/>
+    <wire from="(550,190)" to="(550,310)"/>
+    <wire from="(620,350)" to="(660,350)"/>
+    <wire from="(730,90)" to="(1290,90)"/>
+    <wire from="(730,90)" to="(730,310)"/>
+    <wire from="(760,420)" to="(760,610)"/>
+    <wire from="(760,610)" to="(1250,610)"/>
+    <wire from="(790,180)" to="(1290,180)"/>
+    <wire from="(790,180)" to="(790,310)"/>
+    <wire from="(860,350)" to="(900,350)"/>
+    <wire from="(970,80)" to="(1290,80)"/>
+    <wire from="(970,80)" to="(970,310)"/>
   </circuit>
 </project>
