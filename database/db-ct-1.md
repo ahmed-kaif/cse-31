@@ -1,3 +1,6 @@
+% Database Note 
+% Kaif Ahmed Khan
+
 # Primary Key
 CustomerID
 ProductID
