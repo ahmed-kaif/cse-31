@@ -4,17 +4,20 @@
 SELECT Movie_Name, Genre, IMDB_Rating FROM `movie`;
 ```
 ![Query 1](./images/lab1/Screenshot_2025-04-13_15-15-14.png)
+
 **Query 1.2:** Display all the distinct movie-genres.
 ```sql
 SELECT Genre FROM `movie` GROUP BY Genre;
 ```
 ![Query 2](./images/lab1/Screenshot_2025-04-13_15-17-45.png)
- Query 1.3: Find the name and current age of all the actors.
+
+**Query 1.3:** Find the name and current age of all the actors.
 ```sql
 SELECT Actor_Name, (2025 - Birth_Year) as Age FROM `actor`;
 SELECT Actor_Name, (Year(CURRENT_DATE) - Birth_Year) as Age FROM `actor`;
 ```
 ![Query 3](./images/lab1/Screenshot_2025-04-13_15-22-09.png)
+
 **Query 1.4:** Find all the movies of the thriller genre with an IMDB rating
 greater than or equal to 8.0.
 ```sql
@@ -22,6 +25,7 @@ SELECT Movie_Name, IMDB_Rating FROM `movie`
 WHERE Genre = "Thriller" AND IMDB_Rating >= 8.0;
 ```
 ![Query 4](./images/lab1/Screenshot_2025-04-13_15-24-13.png)
+
 **Query 1.5:** Find the name, release year, IMDB rating, and the name of the
 director of all the movies.
 ```sql
@@ -29,6 +33,7 @@ SELECT Movie_Name, Year, IMDB_Rating, Director_Name FROM `movie` as M
 JOIN `director` as D on M.Director_ID = D.Person_ID;
 ```
 ![Query 5](./images/lab1/Screenshot_2025-04-13_15-30-33.png)
+
 # Level 2
 
 **Query 1.6:** Find the name and number of awards of those directors whose
@@ -38,6 +43,7 @@ SELECT Director_Name, No_Of_Awards FROM `director`
 WHERE Director_Name LIKE "R%" OR Director_Name LIKE "A%";
 ```
 ![Query 6](./images/lab1/Screenshot_2025-04-13_15-35-07.png)
+
 **Query 1.7:** Find the name and birth year of those directors whose name
 contains an ‘a’ as its 2nd last character.
 ```sql
@@ -60,12 +66,14 @@ consists of only 2 characters.
 SELECT Movie_Name, IMDB_Rating FROM `movie` WHERE LENGTH(Movie_Name) = 2;
 ```
 ![Query 9](./images/lab1/Screenshot_2025-04-13_15-42-36.png)
+
 **Query 1.10:** Find the name and genre of all the movies whose name consists
 of at least 3 characters.
 ```sql
 SELECT Movie_Name, Genre FROM `movie` WHERE LENGTH(Movie_Name) >= 3;
 ```
 ![Query 10](./images/lab1/Screenshot_2025-04-13_15-44-20.png)
+
 **Query 1.Last:** Find the name and IMDB rating of all the movies which
 contain at most 9 characters in their name.
 ```sql
