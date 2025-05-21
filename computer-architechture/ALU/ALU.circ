@@ -68,32 +68,32 @@
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1030,300)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="ALU_AND"/>
+      <a name="label" val="AND_4"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1030,330)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="ALU_OR"/>
+      <a name="label" val="OR_4"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1030,360)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="ALU_XOR"/>
+      <a name="label" val="XOR_4"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1030,390)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="ALU_LOR"/>
+      <a name="label" val="LOR_2"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1030,420)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="ALU_ROR"/>
+      <a name="label" val="ROR_2"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1030,450)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="ALU_NOT"/>
+      <a name="label" val="NOT_4"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(1030,480)" name="Tunnel">
@@ -258,27 +258,27 @@
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(770,290)" name="Tunnel">
-      <a name="label" val="ALU_XOR"/>
+      <a name="label" val="XOR_4"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(770,400)" name="Tunnel">
-      <a name="label" val="ALU_NOT"/>
+      <a name="label" val="NOT_4"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(770,500)" name="Tunnel">
-      <a name="label" val="ALU_LOR"/>
+      <a name="label" val="LOR_2"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(770,620)" name="Tunnel">
-      <a name="label" val="ALU_ROR"/>
+      <a name="label" val="ROR_2"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(770,80)" name="Tunnel">
-      <a name="label" val="ALU_AND"/>
+      <a name="label" val="AND_4"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(780,180)" name="Tunnel">
-      <a name="label" val="ALU_OR"/>
+      <a name="label" val="OR_4"/>
       <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(80,590)" name="Tunnel">
