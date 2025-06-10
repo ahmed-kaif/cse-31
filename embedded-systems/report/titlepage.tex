@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \usepackage[a4paper,top=2cm,bottom=3cm]{geometry}
 % \usepackage{tgpagella}
-\usepackage{inconsolata}
+% \usepackage{inconsolata}
 \usepackage{float}
 \usepackage{siunitx}
 \usepackage{tikz}
@@ -21,7 +21,7 @@
 \newcommand{\thedept}{Department of Computer Science \& Engineering}
 % Course title
 \newcommand{\thecourse}{CSE 3106 \\Computer Interfacing \& Embedded Systems}
-\newcommand{\labgraph}{Turning on \& Blinking a LED}
+\newcommand{\labgraph}{Lab 3: Potentiometer, LDR Sensor, Temperature Sensor}
 % Lab report Title
 \newcommand{\thetitle}{\labgraph}
 % Author
@@ -35,6 +35,9 @@
 
 \newcommand{\thedesignation}{\lec}
 
+% \renewcommand{\lstlistingname}{Code}% Listing -> Code
+% \renewcommand{\lstlistlistingname}{List of \lstlistingname s}% List of Listings -> List of Codes
+%
 \newenvironment{code}{\captionsetup{type=listing}}{}
 %%%%%%%%%%%%%%%% Minted Style for C++ files %%%%%%
 \newmintedfile[cppcode]{cpp}{
@@ -97,9 +100,11 @@ Submitted to\par
 \newpage
 %%%% Add Lab Pages %%%%
 \pagenumbering{arabic}
-\include{lab1.tex}
+% \include{lab1.tex}
 % \include{lab2.tex}
 % \include{lab3.tex}
-% \include{lab4.tex}
+\include{lab4.tex}
+\include{lab5.tex}
+\include{lab6.tex}
 
 \end{document}
