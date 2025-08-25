@@ -2,6 +2,55 @@
 \subsection{Frontend Components}
 \subsection{Backend Components}
 \subsection{Dataflow Diagram}
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{figures/dataflow.png}
+  \end{center}
+  \caption{Dataflow diagram of the website}\label{fig:dataflow}
+\end{figure}
+
 \subsection{User Interaction Diagram}
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{figures/sequence-diagram.png}
+  \end{center}
+  \caption{Sequence diagram for showing how the user interacts with the website}\label{fig:sequence-diagram}
+\end{figure}
+
 \subsection{Key Features}
+\subsection*{User Management}
+\begin{itemize}
+    \item User registration and login system with PostgreSQL database authentication.
+    \item Role-based access control: Patients (users) and Admins.
+    \item Secure storage of user information.
+\end{itemize}
+
+\subsection*{Prediction System}
+\begin{itemize}
+    \item Input form for blood report data (patient submits laboratory values).
+    \item Pretrained machine learning model processes the input.
+    \item Prediction of HCV stage (4 classes: 0--3).
+    \item Prediction result is displayed instantly to the user.
+\end{itemize}
+
+\subsection*{Prediction History}
+\begin{itemize}
+    \item Patients can view their own previous predictions.
+    \item Admins can view all users' predictions for monitoring and analysis.
+\end{itemize}
+
+\subsection*{Database Integration}
+\begin{itemize}
+    \item PostgreSQL database with two main tables:
+    \begin{itemize}
+        \item \textbf{User Table}: Stores user credentials and profile information.
+        \item \textbf{Prediction Table}: Stores patient input, prediction results, and timestamps.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Security and Roles}
+\begin{itemize}
+    \item Authentication system for both patients and admins.
+    \item Role-specific permissions (patients see only their own data, admins see all data).
+\end{itemize}
 

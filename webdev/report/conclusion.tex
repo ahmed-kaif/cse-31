@@ -1,0 +1,29 @@
+\section{Conclusion}
+The medical prediction website successfully delivers a platform where users can register,
+log in, submit their blood report data, and receive predictions for HCV stages
+using a pretrained machine learning model. Users can view their prediction
+history, while administrators have access to all prediction records
+for monitoring purposes. The integration of FastAPI, Next.js, Supabase,
+and Docker has resulted in a lightweight, efficient, and scalable system.
+
+During development, several lessons were learned and challenges encountered.
+Implementing the backend API with FastAPI highlighted the importance of asynchronous programming
+to efficiently handle multiple requests. Integrating the machine learning model
+required careful preprocessing and validation to ensure accurate predictions.
+Designing the database schema and optimizing queries in Supabase was crucial for reliable 
+storage and retrieval of prediction data. Deploying the application with Docker
+and on cloud platforms presented challenges related to environment configuration and dependency management.
+Additionally, managing overlapping frontend and backend development tasks emphasized the need for careful project scheduling.
+
+For future improvements, the system could incorporate enhanced user authentication 
+mechanisms such as OAuth or multi-factor authentication
+to strengthen security. Visualization features could be added
+to display prediction trends over time for each user, and
+the machine learning model could be continuously retrained with anonymized
+new data to improve accuracy. Notifications or email summaries could be
+implemented to inform users of new predictions, and the platform could
+be expanded to support additional medical conditions or lab tests.
+Finally, the deployment process can be further improved with automated
+CI/CD pipelines and monitoring tools to ensure reliability and maintainability.
+This project lays a solid foundation for an efficient, scalable, and user-friendly
+medical prediction system while providing opportunities for future enhancement.

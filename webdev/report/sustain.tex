@@ -1,0 +1,29 @@
+\section{Sustainability and Environmental Considerations}
+
+In developing the medical prediction website, sustainability and environmental 
+impact have been considered in both design and deployment. The following strategies are applied:
+
+\subsection*{Performance Optimization}
+The backend, implemented using FastAPI, is lightweight and asynchronous,
+which reduces server load and ensures efficient handling of requests.
+The frontend, built with Next.js, supports static site generation and
+server-side rendering, which decreases repeated computation and improves
+response times. These optimizations reduce unnecessary resource consumption
+and improve the overall energy efficiency of the system.
+
+\subsection*{Energy Efficiency in Coding and Infrastructure}
+The codebase follows modular and efficient practices to minimize redundant operations.
+Database queries are optimized to avoid excessive computation in Supabase.
+Containerization with Docker allows for consistent and isolated environments,
+reducing wasted resources across deployments. Additionally, horizontal scaling strategies
+are preferred over overprovisioning, ensuring resources are used only when required.
+
+\subsection*{Long-Term Impact}
+By deploying the application on modern cloud platforms such as Render or Railway,
+the system benefits from shared, energy-efficient infrastructure.
+This reduces the need for dedicated high-power servers.
+The chosen stack supports scalability, which means the application
+can grow without significant increases in energy use per user.
+In the long term, the platform aims to provide medical predictions with minimal environmental
+footprint while supporting sustainable digital health practices.
+
