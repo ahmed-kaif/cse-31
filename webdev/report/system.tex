@@ -10,6 +10,7 @@
 \end{figure}
 
 \subsection{User Interaction Diagram}
+
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=\textwidth]{figures/sequence-diagram.png}
@@ -18,13 +19,64 @@
 \end{figure}
 
 \subsection{Key Features}
+
+\begin{figure}[htbp]
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/predict.png} 
+    \caption{Prediction Page}
+    \label{fig:subim1}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/prediction02.png}
+    \caption{Showing prediction result}
+    \label{fig:predict}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/dashboard.png}
+    \caption{Prediction history in dashboard}
+    \label{fig:dashboard}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/details.png}
+    \caption{Prediction details modal}
+    \label{fig:details}
+  \end{subfigure}
+  \caption{Prediction system and prediction history in dashboard}
+  \label{fig:image2}
+\end{figure}
+
+
+\begin{figure}[htbp]
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/admin-profile.png} 
+    \caption{Admin profile page}
+    \label{fig:profile}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth, height=6cm]{figures/site/user-details.png}
+    \caption{User details modal}
+    \label{fig:userdetails}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth, height=6cm]{figures/site/edit-profile.png}
+    \caption{Edit profile details}
+    \label{fig:edit}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/normaluser.png}
+    \caption{Non-admin profile page}
+    \label{fig:detail}
+  \end{subfigure}
+  \caption{User Management}
+  \label{fig:image3}
+\end{figure}
+
 \subsection*{User Management}
 \begin{itemize}
     \item User registration and login system with PostgreSQL database authentication.
     \item Role-based access control: Patients (users) and Admins.
     \item Secure storage of user information.
 \end{itemize}
-
 \subsection*{Prediction System}
 \begin{itemize}
     \item Input form for blood report data (patient submits laboratory values).
