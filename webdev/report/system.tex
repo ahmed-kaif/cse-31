@@ -1,6 +1,28 @@
 \section{System Components}
+The system is composed of two main components: the front-end and the back-end,
+which work together to provide a seamless user experience and efficient data processing.
+
 \subsection{Frontend Components}
+The front-end of the system is built using Next.js, a React-based framework that
+enables server-side rendering and static site generation for improved performance.
+This component is responsible for the user interface, allowing patients and administrators
+to interact with the system. Users can register, log in, submit their medical data, and view
+their prediction results through a responsive and intuitive interface. Administrators,
+on the other hand, have access to dashboards where they can view predictions submitted by all users.
+The front-end communicates with the back-end through RESTful APIs,
+ensuring that user actions are efficiently processed and results are delivered in real time.
 \subsection{Backend Components}
+The back-end of the system is implemented using FastAPI\footnote{\url{https://fastapi.tiangolo.com/}} 
+, a modern Python framework
+designed for high-performance APIs. This component handles authentication, authorization,
+and data management. It processes user-submitted medical data,
+forwards the input to the pre-trained machine learning model built with Scikit-Learn,
+and returns prediction results to the front-end. The back-end also manages the storage and retrieval
+of user data and prediction records using a relational database, implemented with SQLite for simplicity and reliability.
+Furthermore, Docker is used to containerize the application, ensuring consistency across development and deployment environments.
+
+Together, the front-end and back-end form a robust system that supports medical prediction tasks,
+ensuring usability, performance, and scalability for both patients and administrators.
 \subsection{Dataflow Diagram}
 \begin{figure}[htbp]
   \begin{center}
@@ -9,7 +31,7 @@
   \caption{Dataflow diagram of the website}\label{fig:dataflow}
 \end{figure}
 
-\subsection{User Interaction Diagram}
+\subsection{Sequence Diagram}
 
 \begin{figure}[htbp]
   \begin{center}
@@ -18,56 +40,63 @@
   \caption{Sequence diagram for showing how the user interacts with the website}\label{fig:sequence-diagram}
 \end{figure}
 
-\subsection{Key Features}
+\subsection{Key Features \& Page Screenshots}
 
-\begin{figure}[htbp]
-  \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=\textwidth]{figures/site/predict.png} 
-    \caption{Prediction Page}
-    \label{fig:subim1}
-  \end{subfigure}
-  \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=\textwidth, height=10cm]{figures/site/prediction02.png}
-    \caption{Showing prediction result}
-    \label{fig:predict}
-  \end{subfigure}
-  \begin{subfigure}{\textwidth}
-    \includegraphics[width=\textwidth]{figures/site/dashboard.png}
-    \caption{Prediction history in dashboard}
-    \label{fig:dashboard}
-  \end{subfigure}
-  \begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{figures/site/details.png}
-    \caption{Prediction details modal}
-    \label{fig:details}
-  \end{subfigure}
-  \caption{Prediction system and prediction history in dashboard}
-  \label{fig:image2}
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{figures/site/homepage.png}
+  \end{center}
+  \caption{Homepage of HCV Predictor}\label{fig:homepage}
 \end{figure}
 
 
 \begin{figure}[htbp]
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/admin-profile.png} 
+    \includegraphics[width=\textwidth]{figures/site/predict1.png} 
+    \caption{Prediction form}
+    \label{fig:form}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=\textwidth]{figures/site/predict2.png}
+    \caption{Prediction result}
+    \label{fig:prediction}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=\textwidth]{figures/site/dashboard.png}
+    \caption{Prediction history in dashboard}
+    \label{fig:dashboard}
+  \end{subfigure}
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=\textwidth]{figures/site/details.png}
+    \caption{Prediction details modal}
+    \label{fig:details}
+  \end{subfigure}
+  \caption{Prediction system and prediction history in dashboard.}
+  \label{fig:image2}
+\end{figure}
+
+\begin{figure}[htbp]
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=\textwidth]{figures/site/admin.png} 
     \caption{Admin profile page}
     \label{fig:profile}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth, height=6cm]{figures/site/user-details.png}
+  \includegraphics[width=\textwidth]{figures/site/user-details.png}
     \caption{User details modal}
     \label{fig:userdetails}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth, height=6cm]{figures/site/edit-profile.png}
+    \includegraphics[width=\textwidth,height=6cm]{figures/site/edit.png}
     \caption{Edit profile details}
     \label{fig:edit}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/normaluser.png}
+    \includegraphics[width=\textwidth, height=6cm]{figures/site/normal.png}
     \caption{Non-admin profile page}
     \label{fig:detail}
   \end{subfigure}
-  \caption{User Management}
+  \caption{User Management. Link: https://172.104.62.100/profile}
   \label{fig:image3}
 \end{figure}
 
