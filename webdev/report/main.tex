@@ -67,7 +67,7 @@ texcl=false
 %%%%% Caption Setup %%%%
 \DeclareCaptionFormat{custom}
 {%
-    {#1#2}\textit{\small #3}
+    {#1#2}{\small #3}
 }
 \captionsetup{format=custom}
 
@@ -97,15 +97,14 @@ Submitted to\par
 \end{titlepage}
 \pagenumbering{roman}
 \tableofcontents
-\listoflistings
 \listoffigures
 \newpage
 %%%% Add Lab Pages %%%%
 \pagenumbering{arabic}
-\include{introduction}
-\include{system}
-\include{tools}
+\input{introduction}
+\input{system}
+\input{tools}
 \include{sustain}
-\include{management-cost}
-\include{conclusion}
+\input{management-cost}
+\input{conclusion}
 \end{document}

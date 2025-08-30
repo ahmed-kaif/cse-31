@@ -22,22 +22,22 @@
 
 \begin{figure}[htbp]
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/predict.png} 
+    \includegraphics[width=\textwidth]{figures/site/predict.png} 
     \caption{Prediction Page}
     \label{fig:subim1}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/prediction02.png}
+    \includegraphics[width=\textwidth, height=10cm]{figures/site/prediction02.png}
     \caption{Showing prediction result}
     \label{fig:predict}
   \end{subfigure}
-  \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/dashboard.png}
+  \begin{subfigure}{\textwidth}
+    \includegraphics[width=\textwidth]{figures/site/dashboard.png}
     \caption{Prediction history in dashboard}
     \label{fig:dashboard}
   \end{subfigure}
-  \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth, height=8cm]{figures/site/details.png}
+  \begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{figures/site/details.png}
     \caption{Prediction details modal}
     \label{fig:details}
   \end{subfigure}
@@ -71,9 +71,17 @@
   \label{fig:image3}
 \end{figure}
 
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=\textwidth]{figures/site/backend-api.png}
+  \end{center}
+  \caption{FastAPI backend documentation @ \url{https://172.104.62.100/api/docs}}\label{fig:backend-api}
+\end{figure}
+
+
 \subsection*{User Management}
 \begin{itemize}
-    \item User registration and login system with PostgreSQL database authentication.
+    \item User registration and login system with SQLite database authentication.
     \item Role-based access control: Patients (users) and Admins.
     \item Secure storage of user information.
 \end{itemize}
@@ -93,10 +101,10 @@
 
 \subsection*{Database Integration}
 \begin{itemize}
-    \item PostgreSQL database with two main tables:
+    \item SQLite database with two main tables:
     \begin{itemize}
-        \item \textbf{User Table}: Stores user credentials and profile information.
-        \item \textbf{Prediction Table}: Stores patient input, prediction results, and timestamps.
+        \item \textbf{Users Table}: Stores user credentials and profile information.
+        \item \textbf{Predictions Table}: Stores patient input, prediction results, and timestamps.
     \end{itemize}
 \end{itemize}
 
